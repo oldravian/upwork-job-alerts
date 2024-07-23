@@ -4,7 +4,8 @@ include_once(__DIR__.'/mailer.php');
 $file_path = 'last_job_link.txt';
 
 //put RSS feed link here
-$xml_string = file_get_contents("https://www.upwork.com/ab/feed/jobs/rss?q=php&sort=recency&paging=0%3B10&api_params=1&securityToken=a5fc4cc25607aad60cbd234411dc8de1097e7d4ec74469a18509ca548621ef2342dae8501f275efc55de8e4b054a3ef62f9851a10bd741d490b692fab40d5537&userUid=1101884452087386112&orgUid=1101884452091580417");
+$feed_link="PUT YOUR LINK HERE";
+$xml_string = file_get_contents($feed_link);
 
 $xml = simplexml_load_string($xml_string);
 
